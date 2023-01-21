@@ -28,7 +28,7 @@ namespace DrawGF
             {
                 if (i % 2 == 0)
                 {
-                    shape[i] = new Circle() { Brush = new SolidBrush(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255))), X = rnd.Next(50, 1400), Y = rnd.Next(10, 800), Width = rnd.Next(10, 100), Height = rnd.Next(10, 100) };
+                    shape[i] = new Circle() { Brush = new SolidBrush(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255))), X = rnd.Next(50, 1400), Y = rnd.Next(10, 800), Radius = rnd.Next(10, 100) };
                 }
                 else
                 {

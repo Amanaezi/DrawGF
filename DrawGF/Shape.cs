@@ -17,7 +17,7 @@ namespace DrawGF
         {
             return obj is Shape && this.Equals((Shape)obj);
         }
-        public bool Equals(Shape shape)
+        public bool Equal(Shape shape)
         {
             return shape.Brush == Brush;
         }

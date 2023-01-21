@@ -11,12 +11,12 @@ namespace DrawGF
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
+
+        public int Radius { get; set; }
 
         public override void Draw(Graphics g)
         {
-            g.FillEllipse(Brush, X, Y, Width, Height);
+            g.FillEllipse(Brush, X, Y, Radius, Radius);
         }
 
         public override bool Equals(object obj)
@@ -25,7 +25,7 @@ namespace DrawGF
         }
         public bool Equals(Circle circle)
         {
-            return circle.Width == Width && circle.Height == Height;
+            return circle.Radius == Radius;
         }
     }
 }
