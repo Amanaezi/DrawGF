@@ -10,16 +10,7 @@ namespace DrawGF
     public abstract class Shape
     {
         public Brush Brush { get; set; }
-
         public abstract void Draw(Graphics g);
-
-        public override bool Equals(object obj)
-        {
-            return obj is Shape && this.Equals((Shape)obj);
-        }
-        public bool Equal(Shape shape)
-        {
-            return shape.Brush == Brush;
-        }
+        public abstract bool Equals(object obj);
     }
 }

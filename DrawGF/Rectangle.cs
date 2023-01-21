@@ -20,11 +20,9 @@ namespace DrawGF
 
         public override bool Equals(object obj)
         {
-            return obj is Rectangle && this.Equals((Rectangle)obj);
-        }
-        public bool Equals(Rectangle rectangle)
-        {
-            return rectangle.Width == Width && rectangle.Height == Height;
+            return obj is Rectangle rectangle && 
+                Width == rectangle.Width && 
+                Height == rectangle.Height; 
         }
     }
 }

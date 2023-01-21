@@ -21,11 +21,8 @@ namespace DrawGF
 
         public override bool Equals(object obj)
         {
-            return obj is Circle && this.Equals((Circle)obj);
-        }
-        public bool Equals(Circle circle)
-        {
-            return circle.Radius == Radius;
+            return obj is Circle circle && 
+                Radius == circle.Radius;
         }
     }
 }
