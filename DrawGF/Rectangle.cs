@@ -11,11 +11,11 @@ namespace DrawGF
     {
         public int X { get; set; }
         public int Y { get; set; }
-
-        readonly Random random = new Random();
+        public int Width { get; set; }
+        public int Height { get; set; }
         public override void Draw(Graphics g)
         {
-            g.FillRectangle(Brush, X, Y, random.Next(10, 100), random.Next(10, 100));
+            g.FillRectangle(Brush, X, Y, Width, Height);
         }
 
         public override bool Equals(object obj)
@@ -24,7 +24,7 @@ namespace DrawGF
         }
         public bool Equals(Rectangle rectangle)
         {
-            return rectangle.X == X && rectangle.Y == Y;
+            return rectangle.Width == Width && rectangle.Height == Height;
         }
     }
 }
